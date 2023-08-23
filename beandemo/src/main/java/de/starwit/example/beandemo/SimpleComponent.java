@@ -8,12 +8,15 @@ import org.springframework.stereotype.Component;
 import jakarta.annotation.PostConstruct;
 
 @Component
-public class MyComponent {
+public class SimpleComponent {
     
-    private Logger log = LoggerFactory.getLogger(MyComponent.class);  
+    private Logger log = LoggerFactory.getLogger(SimpleComponent.class);  
 
     @Autowired
-    SimpleBean sBean;   
+    SimpleBean sBean;
+    
+    @Autowired
+    ConfiguredBean cBean;
 
     @PostConstruct
     public void doStuffOnStartup() {

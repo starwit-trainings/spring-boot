@@ -10,6 +10,10 @@ public class SimpleBean {
     public SimpleBean() {
         log.info("If you want to initialize your bean, do it here.");
     }
+
+    public void init() {
+        log.info("This is another method to init your bean.");
+    }
     
 
     public void doSomething() {

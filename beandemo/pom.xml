@@ -8,14 +8,17 @@
 		<version>3.1.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>de.starwit.example</groupId>
 	<artifactId>beandemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>beandemo</name>
 	<description>Bean examples Spring Boot</description>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
