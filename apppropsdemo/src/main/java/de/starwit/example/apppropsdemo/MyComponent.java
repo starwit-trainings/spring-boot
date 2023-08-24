@@ -19,10 +19,13 @@ public class MyComponent {
     @Autowired
     private Environment env; 
 
-    @Value( "${avalue}" )
+    @Autowired
+    private ProfiledBean pBean;
+
+    @Value("${avalue}")
     private String aValue;
 
-     @PostConstruct
+    @PostConstruct
     public void doStuffOnStartup() {
         log.info("Bean constructed");
         
@@ -30,5 +33,7 @@ public class MyComponent {
         log.info("Value via environment " + env.getProperty("avalue"));
 
         log.info(Arrays.asList(env.getActiveProfiles()).toString());
+
+        log.info("data from profiled bean: " + pBean.getUsername() + " " + pBean.getPassword() + " with url: " + pBean.getUrl());
     }   
 }

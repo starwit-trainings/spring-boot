@@ -2,6 +2,13 @@
 
 In this example you will find example code, that shows how properties can handed to Spring Boot. It also contains examples, how to use profiles.
 
+## Topics
+* General idea of setting application properties
+* precendence and examples of setting props
+* General idea of profiles
+* profile specific props
+* create profile specific beans
+
 ## How to run
 
     mvn clean package
@@ -17,3 +24,8 @@ In this example you will find example code, that shows how properties can handed
 * CLI params: 
     
         java -jar target/apppropsdemo-0.0.1-SNAPSHOT.jar --avalue=test
+
+# Background
+
+On the order of where parameters are taken from:
+https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config 
