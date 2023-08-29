@@ -1,23 +1,32 @@
 package de.starwit.example.restdemo;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 
 @RestController
+@RequestMapping(path = "${rest.base-path}/user")
 public class SampleRestController {
 
     private Logger log = LoggerFactory.getLogger(SampleRestController.class);
@@ -32,6 +41,18 @@ public class SampleRestController {
         return ResponseEntity.ok(true);
     }
 
+    @Operation(summary = "A fancy function")
+    @PostMapping("/import")
+    @ResponseStatus(HttpStatus.NOT_IMPLEMENTED)
+    String importUsers() {
+        log.info("Not implemented yet");
+        /*
+         * TODO Build a function, that gets a list of users and 
+         * add each user. Every user shall be validated. 
+         */
+        return "Service not implemented yet";
+    }    
+
     @Operation(summary = "Get myusers")
     @GetMapping("/users")
     ResponseEntity<List<MyUser>> getMyUsers() {
@@ -40,6 +61,7 @@ public class SampleRestController {
 
     @Operation(summary = "Create myuser")
     @PostMapping("/users")
+    @ResponseStatus(HttpStatus.CREATED)
     ResponseEntity<String> addMyUser(@Valid @RequestBody MyUser user) {
         repository.save(user);
         return ResponseEntity.ok("User is valid");
