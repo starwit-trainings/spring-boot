@@ -1,10 +1,12 @@
 package de.starwit.example.beandemo;
 
+import java.util.List;
 import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
@@ -22,10 +24,15 @@ public class SimpleComponent {
     private Logger log = LoggerFactory.getLogger(SimpleComponent.class); 
 
     @Autowired
+    @Qualifier("sBean")
     SimpleBean sBean;
     
     @Autowired
     ConfiguredBean cBean;
+
+    @Autowired
+    @Qualifier("sBeanList")
+    List<SimpleBean> beanList;
 
     @PostConstruct
     public void doStuffOnStartup() {
@@ -44,6 +51,11 @@ public class SimpleComponent {
             for (ConstraintViolation<ConfiguredBean> violation : violations) {
                 log.info(violation.getMessage());
             }
+        }
+
+        log.info("Size of beanList " + beanList.size());
+        for (SimpleBean bean : beanList) {
+            log.debug(bean.toString());
         }
     }
 }
