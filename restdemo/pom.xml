@@ -19,6 +19,7 @@
 		<java.version>17</java.version>
 		<openapi-version>2.1.0</openapi-version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -38,10 +39,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
@@ -54,11 +51,11 @@
 			<artifactId>springdoc-openapi-starter-common</artifactId>
 			<version>${openapi-version}</version>
 		</dependency>
-		<dependency>
+<!-- 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-starter-client</artifactId>
 			<version>3.1.5</version>
-		</dependency>	
+		</dependency> -->	
 		<dependency> 
 			<groupId>com.h2database</groupId> 
 			<artifactId>h2</artifactId>

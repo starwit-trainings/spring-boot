@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/math")
+@RequestMapping("${rest.base-path}/math")
 public class MathController {
     
     @GetMapping("/add")

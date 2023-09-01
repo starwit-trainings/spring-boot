@@ -1,4 +1,4 @@
-package de.starwit.example.restdemo;
+package de.starwit.example.testexample;
 
 import java.util.HashMap;
 import java.util.List;
