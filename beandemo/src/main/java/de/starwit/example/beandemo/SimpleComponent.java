@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
@@ -33,6 +34,9 @@ public class SimpleComponent {
     @Autowired
     @Qualifier("sBeanList")
     List<SimpleBean> beanList;
+
+    @Autowired
+    ScopedBean scopedBean;
 
     @PostConstruct
     public void doStuffOnStartup() {
@@ -57,5 +61,13 @@ public class SimpleComponent {
         for (SimpleBean bean : beanList) {
             log.debug(bean.toString());
         }
+
+        log.info("ScopedBean with value " + scopedBean.getNumber());
+    }
+
+    @PreDestroy
+    public void cleanUp() {
+        log.info("Component is about to be removed");
+        beanList.clear();        
     }
 }

@@ -12,6 +12,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Scope;
 
 @SpringBootApplication(scanBasePackages = {"de.starwit.example.beandemo"})
 @ComponentScan(basePackageClasses = ConfiguredBean.class)
@@ -34,5 +35,11 @@ public class BeandemoApplication {
 	@Bean(initMethod = "init")
 	public ConfiguredBean getConfiguredBean() {
 		return new ConfiguredBean();
+	}
+
+	@Bean
+	@Scope("prototype")
+	public ScopedBean getScopedBean() {
+		return new ScopedBean();
 	}
 }

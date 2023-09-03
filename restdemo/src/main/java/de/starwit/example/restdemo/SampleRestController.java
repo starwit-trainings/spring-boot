@@ -33,7 +33,17 @@ public class SampleRestController {
     private Logger log = LoggerFactory.getLogger(SampleRestController.class);
 
     @Autowired
-    MyUserRepository repository;    
+    MyUserRepository repository;
+
+    @Autowired
+    ScopedBean scopedBean;
+
+    @Operation(summary = "A fancy function")
+    @GetMapping("/scope")
+    ResponseEntity<Integer> beanScopeDemo() {
+        log.info("Scope demo called");
+        return ResponseEntity.ok(scopedBean.getNumber());
+    }    
 
     @Operation(summary = "A fancy function")
     @GetMapping("/sample")
