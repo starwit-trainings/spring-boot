@@ -62,7 +62,19 @@ public class SampleRestController {
          * add each user. Every user shall be validated. 
          */
         return "Service not implemented yet";
-    }    
+    }
+    
+    @Operation(summary = "Export by Name")
+    @PostMapping("/export/{pattern}")
+    @ResponseStatus(HttpStatus.NOT_IMPLEMENTED)
+    String exportUsers(@PathVariable("pattern") String pattern) {
+        log.info("Not implemented yet");
+        /*
+         * TODO export users that have names matching pattern 
+         */
+        return "Service not implemented yet";
+    }
+      
 
     @Operation(summary = "Get myusers")
     @GetMapping
