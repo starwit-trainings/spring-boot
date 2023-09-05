@@ -74,9 +74,9 @@ public class SampleRestController {
     @Operation(summary = "Create myuser")
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    ResponseEntity<String> addMyUser(@Valid @RequestBody MyUser user) {
-        repository.save(user);
-        return ResponseEntity.ok("User is valid");
+    ResponseEntity<MyUser> addMyUser(@Valid @RequestBody MyUser user) {
+        MyUser savedUser = repository.save(user);
+        return ResponseEntity.ok(savedUser);
     }
 
     @Operation(summary = "Update myuser")
