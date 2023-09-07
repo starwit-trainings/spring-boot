@@ -8,6 +8,12 @@
 - Send a request to public endpoint without auth under `http://host:port/public-endpoint`
 - Send a request to protected endpoint under `http://host:port/protected-endpoint`
 - Get a valid token as described below for successful authentication
+- Retry `/protected-endpoint`
+- Send a request to `/admin-endpoint`
+- Assign role `admin` to test user
+- Get new token
+- Retry `/admin-endpoint`
+- Retry `/protected-endpoint` and see changed list of roles the user has
 
 # How-To Authenticate
 - Get token from Keycloak\
