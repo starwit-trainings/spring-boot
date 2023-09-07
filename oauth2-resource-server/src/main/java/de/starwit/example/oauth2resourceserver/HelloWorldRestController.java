@@ -23,4 +23,9 @@ public class HelloWorldRestController {
         return String.format("Hi %s\nJust between you and me... \"Hello World :)\"\n\nP.S.: You have the following roles %s", username, authorities);
     }
 
+    @GetMapping("/admin-endpoint")
+    public String adminEndpoint() {
+        return "With great power comes great responsibility.";
+    }
+
 }

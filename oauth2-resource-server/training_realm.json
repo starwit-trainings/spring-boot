@@ -138,6 +138,20 @@
       ]
     }
   ],
+  "roles": {
+    "realm": [
+      {
+        "name": "admin",
+        "composite": false,
+        "clientRole": false
+      },
+      {
+        "name": "user",
+        "composite": false,
+        "clientRole": false
+      }
+    ]
+  },
   "users": [
     {
       "username": "test",
@@ -151,6 +165,9 @@
           "type": "password",
           "value": "test"
         }
+      ],
+      "realmRoles": [
+        "user"
       ]
     }
   ]
