@@ -1,5 +1,16 @@
 package de.starwit.example.oauth2resourceserver;
 
+import java.security.Principal;
+import java.util.List;
+
+import org.springframework.security.authentication.AbstractAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.core.oidc.OidcIdToken;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
+import org.springframework.security.oauth2.server.resource.authentication.AbstractOAuth2TokenAuthenticationToken;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,8 +23,11 @@ public class HelloWorldRestController {
     }
 
     @GetMapping("/protected-endpoint")
-    public String protectedEndpoint() {
-        return "Just between you and me... \"Hello World :)\"";
+    public String protectedEndpoint(AbstractOAuth2TokenAuthenticationToken<?> authToken) {
+        String username = (String) authToken.getTokenAttributes().get("preferred_username");
+        List<String> authorities = authToken.getAuthorities().stream().map(GrantedAuthority::getAuthority).toList();
+
+        return String.format("Hi %s\nJust between you and me... \"Hello World :)\"\n\nP.S.: You have the following roles %s", username, authorities);
     }
 
 }
