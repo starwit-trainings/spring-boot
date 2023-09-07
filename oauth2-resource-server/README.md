@@ -22,8 +22,8 @@
     --header 'Content-Type: application/x-www-form-urlencoded' \
     --data grant_type=password \
     --data client_id=spring-example-app \
-    --data username=username \
-    --data password=password
+    --data username=test \
+    --data password=test
     ```
 - Set token as bearer in app request\
     ```sh
