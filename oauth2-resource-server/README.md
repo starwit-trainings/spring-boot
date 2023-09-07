@@ -1,0 +1,28 @@
+# How-To Run
+- Start local Keycloak
+- Create realm "training" by importing `training_realm.json`
+- Add user to realm
+- Adapt Keycloak URI in `src/main/resources/application.properties` if necessary
+- (If you're interested, comment in the Spring Security logging config property) 
+- Run Java app with `./mvnw spring-boot:run`
+- Send a request to public endpoint without auth under `http://host:port/public-endpoint`
+- Send a request to protected endpoint under `http://host:port/protected-endpoint`
+- Get a valid token as described below for successful authentication
+
+# How-To Authenticate
+- Get token from Keycloak\
+    ```sh
+    curl --request POST \
+    --url http://localhost:8081/realms/training/protocol/openid-connect/token \
+    --header 'Content-Type: application/x-www-form-urlencoded' \
+    --data grant_type=password \
+    --data client_id=spring-example-app \
+    --data username=username \
+    --data password=password
+    ```
+- Set token as bearer in app request\
+    ```sh
+    curl --request GET \
+    --url http://localhost:8080/protected-endpoint \
+    --header 'Authorization: Bearer <access_token>'
+    ```
