@@ -137,6 +137,22 @@
         }
       ]
     }
+  ],
+  "users": [
+    {
+      "username": "test",
+      "email": "test@example.com",
+      "emailVerified": true,
+      "enabled": true,
+      "firstName": "Test",
+      "lastName": "User",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "test"
+        }
+      ]
+    }
   ]
 }
 
