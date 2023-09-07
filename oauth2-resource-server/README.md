@@ -1,7 +1,6 @@
 # How-To Run
 - Start local Keycloak
 - Create realm "training" by importing `training_realm.json`
-- Add user to realm
 - Adapt Keycloak URI in `src/main/resources/application.properties` if necessary
 - (If you're interested, comment in the Spring Security logging config property) 
 - Run Java app with `./mvnw spring-boot:run`
