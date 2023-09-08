@@ -16,6 +16,8 @@ public class SecurityConfig {
         http
             .authorizeHttpRequests(authorize -> authorize
                 .requestMatchers("/public-endpoint").permitAll()
+                .requestMatchers("/index.html").permitAll()
+                .requestMatchers("/js/*").permitAll()
                 .requestMatchers("/admin-endpoint").hasAuthority("admin")
                 .anyRequest().authenticated()
             )
