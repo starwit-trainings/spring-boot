@@ -21,6 +21,8 @@ import de.user.persistence.repository.OrganisationRepository;
  * Mockito tests: when testing complicated business logic,
  * it can be faster to mock parts of the service,
  * e.g. writing and reading to repositories via database
+ * see
+ * https://howtodoinjava.com/spring-boot2/testing/spring-boot-mockito-junit-example/
  */
 @ExtendWith(MockitoExtension.class)
 public class OrganisationServiceTest {
