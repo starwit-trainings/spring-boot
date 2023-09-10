@@ -31,18 +31,14 @@ public class OrganisationEntity extends AbstractEntity<Long> {
     @Column(name = "name", nullable = false)
     private String name;
 
-
     @Column(name = "longlongnumber")
-    private Long longlongNumber;
-
+    private Long longlongNumber = 42L;
 
     @Column(name = "somebigdecimal")
     private BigDecimal someBigDecimal;
 
-
     @Column(name = "thedoulbebugfix")
     private Double theDoulbeBugfix;
-
 
     // entity relations
     @JsonFilter("filterId")
