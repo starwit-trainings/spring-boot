@@ -31,6 +31,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
  * If you are looking to load your full application configuration,
  * but use an embedded database, you should consider @SpringBootTest
  * combined with @AutoConfigureTestDatabase rather than this annotation.
+ * 
+ * Read more about test slicing: https://reflectoring.io/spring-boot-test/
  */
 @DataJpaTest
 public class OrganisationRepositoryTest {

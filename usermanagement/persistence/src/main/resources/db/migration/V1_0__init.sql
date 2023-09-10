@@ -50,6 +50,28 @@ CREATE TABLE "passport"
     CONSTRAINT "passport_pkey" PRIMARY KEY ("id")
 );
 
+CREATE SEQUENCE IF NOT EXISTS "cart_id_seq";
+
+CREATE TABLE "cart"
+(
+    "created" TIMESTAMP WITH TIME ZONE,
+    "id" BIGINT NOT NULL DEFAULT nextval('cart_id_seq'),
+    CONSTRAINT "cart_pkey" PRIMARY KEY ("id")
+);
+
+CREATE SEQUENCE IF NOT EXISTS "article_id_seq";
+
+CREATE TABLE "article"
+(
+    "name" VARCHAR(255),
+    "color" VARCHAR(255),
+    "price" DOUBLE PRECISION,
+    "weight" DOUBLE PRECISION,
+    "cart_id" BIGINT,
+    "id" BIGINT NOT NULL DEFAULT nextval('article_id_seq'),
+    CONSTRAINT "article_pkey" PRIMARY KEY ("id")
+);
+
 ALTER TABLE "myuser"
     ADD CONSTRAINT "fk_myuser_address"
     FOREIGN KEY ("address_id")
@@ -81,3 +103,7 @@ ALTER TABLE "passport"
     FOREIGN KEY ("myuser_id")
     REFERENCES "myuser" ("id");
 
+ALTER TABLE "article"
+    ADD CONSTRAINT "fk_article_cart"
+    FOREIGN KEY ("cart_id")
+    REFERENCES "cart" ("id");
