@@ -39,12 +39,22 @@ public class CartController {
     @Autowired
     private CartService cartService;
 
+
+    /*
+     * TODO
+     * write REST methods for
+     *  - creating new cart
+     *  - add article to cart
+     *  - checkout cart
+     *  - add every checked out cart to an application bean
+     */
+
+
     @Operation(summary = "Get all cart")
     @GetMapping
     public List<CartEntity> findAll() {
         return this.cartService.findAll();
     }
-
 
     @Operation(summary = "Get cart with id")
     @GetMapping(value = "/{id}")

@@ -21,6 +21,9 @@ public class RabbitConfig {
     @Value("rabbitmq.topicname")
     private String topicExchangeName;
 
+    @Value("rabbitmq.orderqueue")
+    private String orderQueueName;
+
     @Bean
 	Queue queue() {
 		return new Queue(queueName, false);
@@ -49,5 +52,17 @@ public class RabbitConfig {
 	MessageListenerAdapter listenerAdapter(Receiver receiver) {
 		return new MessageListenerAdapter(receiver, "receiveMessage");
 	}
+
+    @Bean(name = "orderQueue")
+	Queue orderQueue() {
+		return new Queue(orderQueueName, true);
+	}
+
+	@Bean(name = "orderBinding")
+	Binding orderBinding(Queue queue, TopicExchange exchange) {
+		return BindingBuilder.bind(orderQueue())
+			.to(exchange)
+			.with("orders.#");
+	}	
 
 }
