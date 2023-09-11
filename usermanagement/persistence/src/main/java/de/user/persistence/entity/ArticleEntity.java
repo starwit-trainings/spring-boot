@@ -86,4 +86,10 @@ public class ArticleEntity extends AbstractEntity<Long> {
         this.cart = cart;
     }
 
+    @Override
+    public String toString() {
+        return "ArticleEntity [name=" + name + ", color=" + color + ", price=" + price + ", weight=" + weight
+                + ", cart=" + cart + "]";
+    }
+
 }

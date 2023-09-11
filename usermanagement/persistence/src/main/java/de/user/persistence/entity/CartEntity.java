@@ -54,4 +54,9 @@ public class CartEntity extends AbstractEntity<Long> {
         this.article = article;
     }
 
+    @Override
+    public String toString() {
+        return "CartEntity [created=" + created + ", article=" + article.size() + "]";
+    }
+
 }
