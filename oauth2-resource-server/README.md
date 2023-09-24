@@ -1,4 +1,8 @@
-# How-To Run
+# Spring Boot Security - Resource Server
+
+## Topics
+
+## How-To Run
 - Start local Keycloak
 - Create realm "training" by importing `training_realm.json`
 - Adapt Keycloak URI in `src/main/resources/application.properties` if necessary
@@ -14,7 +18,7 @@
 - Retry `/admin-endpoint`
 - Retry `/protected-endpoint` and see changed list of roles the user has
 
-# How-To Authenticate
+### How-To Authenticate
 - Get token from Keycloak\
     ```sh
     curl --request POST \
@@ -31,3 +35,5 @@
     --url http://localhost:8080/protected-endpoint \
     --header 'Authorization: Bearer <access_token>'
     ```
+
+## Exercises
