@@ -1,4 +1,4 @@
-# Messaging with RabbitMQ example
+# Messaging with RabbitMQ Example
 This project demonstrates how to use AMQP messaging with Spring Boot and RabbitMQ. It connects to an existing instance of RabbitMQ with coordinates provided in application properties.
 
 A local RabbitMQ instance can be run using Docker/Podman
@@ -10,11 +10,11 @@ A local RabbitMQ instance can be run using Docker/Podman
 * Receiving from multiple queues
 * RabbitMQ admin interface
 
-## How to run
+## How to Run
 
     mvn clean package
     java -jar target/rabbit-mq-0.0.1-SNAPSHOT.jar
 
 ## Exercises
-* save received users to database
-* send JSON messages via RabbitMQ admin interface
+* Save received users to database
+* Send JSON messages via RabbitMQ admin interface

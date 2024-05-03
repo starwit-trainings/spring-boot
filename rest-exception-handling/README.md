@@ -1,12 +1,12 @@
-# REST exception handling example
+# REST Exception Handling Example
 This project demonstrates how to handle exceptions with REST services in Spring Boot.
 
 ## Topics
-* concept of exceptions
-* validation & exceptions
-* examples how parameters lead to many combinations that needs to be handled with exceptions
+* Concept of exceptions
+* Validation & exceptions
+* Examples how parameters lead to many combinations that needs to be handled with exceptions
 
-## How to run
+## How to Run
 
     mvn clean package
     java -jar target/rest-exception-handling-0.0.1-SNAPSHOT.jar 
@@ -15,6 +15,6 @@ This project demonstrates how to handle exceptions with REST services in Spring 
 - Play around with the parameters and see what happens 
 
 ## Exercises
-* implement additional REST service
-* extend number of parameters
-* build services with complex parameters
+* Implement additional REST service
+* Extend number of parameters
+* Build services with complex parameters

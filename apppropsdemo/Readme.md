@@ -1,13 +1,13 @@
 # Demo Project Application Properties and Profiles
 
-In this example you will find example code, that shows how properties can handed to Spring Boot. It also contains examples, how to use profiles.
+In this example you will find example code that shows how properties can handed to Spring Boot. It also contains examples on how to use profiles.
 
 ## Topics
 * General idea of setting application properties
-* precendence and examples of setting props
+* Precendence and examples of setting props
 * General idea of profiles
-* profile specific props
-* create profile specific beans
+* Profile specific props
+* Create profile specific beans
 
 ## How to run
 
