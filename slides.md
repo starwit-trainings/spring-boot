@@ -84,20 +84,20 @@ Each of the folders in this repo contains a Spring Boot project and here is an o
 ---
 ## Example Projects
 
-1. Bean Demo – [Readme of subproject](beandemo/Readme.md)
-2. Application Properties & Configuration – [Readme of subproject](apppropsdemo/Readme.md)
-3. JDBC & JPA – [Readme of subproject](jdbcexample/Readme.md)
-4. REST Controllers – [Readme of subproject](restdemo/Readme.md)
-5. Handling exceptions for REST APIs – [Readme of subproject](rest-exception-handling/README.md)
-6. Messaging I - Artemis and JMS – [Readme of subproject](messaging-demo/Readme.md)
-7. Messaging II - Rabbit MQ and AMQP – [Readme of subproject](rabbit-mq/Readme.md)
-8. Unit testing in Spring Boot – [Readme of subproject](testexample/Readme.md)
-9. Spring Security - OAuth2 Resource Server – [Readme of subproject](oauth2-resource-server/README.md)
-10. Spring Security - OAuth2 Login –  [Readme of subproject](security-redirect/Readme.md)
-11. Spring Batch – [Readme of subproject](batchexample/Readme.md)
-12. Spring Admin Server – [Readme of subproject](admin-server/Readme.md)
-13. A larger Spring Boot app example – [Readme of subproject](usermanagement/README.MD)
-14. How to use Gradle instead of Maven – [Readme of subproject](gradledemo/Readme.md)
+1. Bean Demo – [Readme of subproject](beandemo/slides.md)
+2. Application Properties & Configuration – [Readme of subproject](apppropsdemo/slides.md)
+3. JDBC & JPA – [Readme of subproject](jdbcexample/slides.md)
+4. REST Controllers – [Readme of subproject](restdemo/slides.md)
+5. Handling exceptions for REST APIs – [Readme of subproject](rest-exception-handling/slides.md)
+6. Messaging I - Artemis and JMS – [Readme of subproject](messaging-demo/slides.md)
+7. Messaging II - Rabbit MQ and AMQP – [Readme of subproject](rabbit-mq/slides.md)
+8. Unit testing in Spring Boot – [Readme of subproject](testexample/slides.md)
+9. Spring Security - OAuth2 Resource Server – [Readme of subproject](oauth2-resource-server/slides.md)
+10. Spring Security - OAuth2 Login –  [Readme of subproject](security-redirect/slides.md)
+11. Spring Batch – [Readme of subproject](batchexample/slides.md)
+12. Spring Admin Server – [Readme of subproject](admin-server/slides.md)
+13. A larger Spring Boot app example – [Readme of subproject](usermanagement/slides.MD)
+14. How to use Gradle instead of Maven – [Readme of subproject](gradledemo/slides.md)
 
 ---
 ## Notes to Students
