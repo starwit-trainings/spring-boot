@@ -1,4 +1,4 @@
-# REST example
+# REST Example
 This project demonstrates how to use REST controller in Spring Boot.
 
 ## Topics
@@ -9,13 +9,13 @@ This project demonstrates how to use REST controller in Spring Boot.
 * Shortcut JPA
 * Spring Endpoints
 
-## How to run
+## How to Run
 
     mvn clean package
     java -jar target/beandemo-0.0.1-SNAPSHOT.jar 
 
 ## Exercises
-* implement bulk import of User entities
-* extend data model given name / last name -> repeat lessons from JPA exercise
-* handle validation violation exceptions
-* build REST service, that filters by user name
+* Implement bulk import of User entities
+* Extend data model given name / last name -> repeat lessons from JPA exercise
+* Handle validation violation exceptions
+* Build REST service, that filters by user name

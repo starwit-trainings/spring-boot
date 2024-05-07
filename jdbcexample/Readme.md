@@ -1,4 +1,4 @@
-# JDBC example
+# JDBC Example
 This project shows how to use JPA in Spring Boot. 
 
 ## Topics
@@ -8,7 +8,7 @@ This project shows how to use JPA in Spring Boot.
 * Simple example to connect REST controller and repositories
 * How JDBC abstracts from actual database
 
-## How to run
+## How to Run
 
     mvn clean package
     java -jar target/jdbcexample-0.0.1-SNAPSHOT.jar 
@@ -24,4 +24,4 @@ This project shows how to use JPA in Spring Boot.
     * method names
     * JPA queries
     * example filter by name
-* extend entity to use given name / last name
+* Extend entity to use given name / last name
