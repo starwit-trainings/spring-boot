@@ -1,0 +1,11 @@
+name: ws-demo
+
+services:
+  redis:
+    image: valkey/valkey:8.0.2
+    ports:
+      - 6379:6379
+    healthcheck:
+      test: "[ \"$(redis-cli ping)\" = \"PONG\" ] && exit 0 || exit 1"
+      interval: 1s
+      start_period: 5s
