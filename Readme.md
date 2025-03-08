@@ -22,6 +22,8 @@ Each of the folders in this repo contains a Spring Boot project and here is an o
 [Readme of subproject](messaging-demo/Readme.md)
 ### 7. Messaging II - Rabbit MQ and AMQP
 [Readme of subproject](rabbit-mq/Readme.md)
+### 8. Messaging III - ValKey/Redis
+[Readme of subproject](messaging-valkey/Readme.md)
 ### 8. Unit testing in Spring Boot
 [Readme of subproject](testexample/Readme.md)
 ### 9. Spring Security - OAuth2 Resource Server
