@@ -24,20 +24,22 @@ Each of the folders in this repo contains a Spring Boot project and here is an o
 [Readme of subproject](rabbit-mq/Readme.md)
 ### 8. Messaging III - ValKey/Redis
 [Readme of subproject](messaging-valkey/Readme.md)
-### 8. Unit testing in Spring Boot
+### 9. Unit testing in Spring Boot
 [Readme of subproject](testexample/Readme.md)
-### 9. Spring Security - OAuth2 Resource Server
+### 10. Spring Security - OAuth2 Resource Server
 [Readme of subproject](oauth2-resource-server/README.md)
-### 10. Spring Security - OAuth2 Login
+### 11. Spring Security - OAuth2 Login
 [Readme of subproject](security-redirect/Readme.md)
-### 11. Spring Batch
+### 12. Spring Batch
 [Readme of subproject](batchexample/Readme.md)
-### 12. Spring Admin Server
+### 13. Spring Admin Server
 [Readme of subproject](admin-server/Readme.md)
-### 13. A larger Spring Boot app example
+### 14. A larger Spring Boot app example
 [Readme of subproject](usermanagement/README.MD)
-### 14. How to use Gradle instead of Maven
+### 15. How to use Gradle instead of Maven
 [Readme of subproject](gradledemo/Readme.md)
+### 16. Spring Boot and Web Sockets
+[Readme of subproject](websockets-demo/Readme.md)
 
 
 ## Notes to Students

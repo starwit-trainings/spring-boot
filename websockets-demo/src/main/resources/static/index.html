@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebSocket Client</title>
+    <style>
+        #incoming_messages {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            height: 300px;
+            overflow-y: auto;
+        }
+
+        .incoming_messages {
+            margin: 5px 0;
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>WebSocket Messages</h2>
+    <p>
+        <div id="connection-status"></div>
+        <div id="incoming_messages"></div>
+    </p>
+    <p>
+        <input type="text" id="client_message" placeholder="Type your message" />
+        <button onclick="sendMessage()">Send</button>
+    </p>
+
+    <script>
+        // Connect to WebSocket server
+        const ws = new WebSocket('ws://localhost:8080/websocket');
+        const connectionStatus = document.getElementById('connection-status');
+        const messagesDiv = document.getElementById('incoming_messages');
+
+        ws.onopen = function (event) {
+            connectionStatus.textContent = 'Connected to server';
+            connectionStatus.style.color = 'green';
+            displayMessage('Connected to server');
+        };
+
+        ws.onmessage = function (event) {
+            displayMessage(event.data);
+        };
+
+        ws.onclose = function (event) {
+            connectionStatus.textContent = 'Disconnected from server';
+            connectionStatus.style.color = 'red';
+            displayMessage('Disconnected from server');
+        };
+
+        ws.onerror = function (error) {
+            connectionStatus.textContent = 'Connection error';
+            connectionStatus.style.color = 'red';
+            displayMessage('Connection error: ' + error);
+        };
+
+        function displayMessage(message) {
+            console.log(message);
+            messagesDiv.textContent = message;
+        }
+
+        function sendMessage() {
+            var client_message = document.getElementById('client_message').value;
+            console.log(client_message);
+            ws.send(client_message);
+        }
+    </script>    
+</body>
+</html>
