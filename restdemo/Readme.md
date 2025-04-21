@@ -12,7 +12,7 @@ This project demonstrates how to use REST controller in Spring Boot.
 ## How to Run
 
     mvn clean package
-    java -jar target/beandemo-0.0.1-SNAPSHOT.jar 
+    java -jar target/restdemo-0.0.1-SNAPSHOT.jar 
 
 ## Exercises
 * Implement bulk import of User entities
